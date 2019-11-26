@@ -264,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 0.5
   attackDamage: 3
-  delay: 1
+  delay: 5
 --- !u!1 &8246757278551341151
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,10 +24,16 @@ public class RandomMapGenerator : MonoBehaviour
     private void Awake()
     {
         Direction lastD = randomFrom2(Direction.N, Direction.W, 0.6f);
+
+
+        //Debug.DrawRay(lastP1, Vector3.up * 3f, Color.red, 50f);
+
         count = 0;
         foreach (Vector3 spawn in spawns)
         {
             Vector3 adjacent = spawn + toVector(lastD) * 5f *randomizeLength();
+            Debug.DrawRay(spawn, Vector3.up * 3f, Color.red, 50f);
+
 
             lastD = rightAngle(lastD);
             placeBricks(spawn, lastD, 3, 3);
@@ -93,15 +99,24 @@ public class RandomMapGenerator : MonoBehaviour
         rotateBrickByDirection(direction, script);
         int tries = 0;
 
+        Debug.Log("DIRECTIONS " + named(direction));
+
         Vector3 from = origin;
 
         while (script.placeSolid() && tries < gridLimit)
         {
+            Debug.Log("PLACE ONE BRICK " + named(direction));
+            Debug.DrawRay(from + Vector3.up, toVector(direction) * script.getCubeGridCellWith() * 2f, Color.green, 50f);
 
             from = from + (toVector(direction) * script.getCubeGridCellWith() * script.getLengthCount() * randomizeLength());
 
+
+            Debug.DrawRay(from, Vector3.up * 3f, Color.red, 50f);
+
+
             if (tryIf(0.2f))
             {
+                Debug.Log("FORK");
                 placeBricks(from, randomFrom2(rightAngle(direction), leftAngle(direction), 7f), gridLimit, steps - 1);
             }
 
@@ -112,6 +127,7 @@ public class RandomMapGenerator : MonoBehaviour
             script = swapBrickMaybe(0.4f, from, direction, script);
             tries++;
         }
+        Debug.Log("EXIT");
     }
 
     private bool outsideMap(Vector3 p)

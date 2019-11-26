@@ -1,55 +1,16 @@
 ﻿
-using UnityEngine;
-
 public class PausableEnemyManager : EnemyManager
 {
-    float elapsed;
-    float spawnDelay;
-    float lastSpawned;
-    const float updateDelay = 10f;
-
-
     protected override void Start()
     {
-        //do not invoke the method, use Update()
+        InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
-    private void Awake()
-    {
-        elapsed = 0f;
-        spawnDelay = getSpawnDelay(elapsed);
-        lastSpawned = 0f;
-    }
-
-    protected void Update()
+    protected override void Spawn()
     {
         if (!Pause.gamePaused())
         {
-            elapsed += Time.deltaTime;
-
-            if (elapsed % updateDelay < 1f)
-            {
-                spawnDelay = getSpawnDelay(elapsed);
-            }
-
-            if (lastSpawned >= spawnDelay)
-            {
-                Spawn();
-                Debug.Log("Spawned in " + lastSpawned + ", in game time of " + elapsed);
-
-                lastSpawned = 0f;
-            }
-            else
-            {
-                lastSpawned += Time.deltaTime;
-            }
+            base.Spawn();
         }
-
-        
-    }
-
-    private static float getSpawnDelay(float elapsedTime)
-    {
-        return Mathf.Max(3 * Mathf.Sin((elapsedTime + 300f) / 200f) + 3.3f, 0.4f);
     }
 }

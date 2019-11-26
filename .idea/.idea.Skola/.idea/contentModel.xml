@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Projects\Skola" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="amusedART" t="Include">
+          <e p="Mushroom_Monster" t="Include">
+            <e p="Script" t="Include">
+              <e p="MushroomMon_Ani_Test.cs" t="Include" />
+            </e>
+          </e>
+          <e p="StoneMonster" t="Include">
+            <e p="Script" t="Include">
+              <e p="Animation_Test.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Fonts" t="Include">
+          <e p="LuckiestGuy" t="Include">
+            <e p="FontLicense.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Metal Impact" t="Include">
+          <e p="License (Read before using).txt" t="Include" />
+          <e p="Script" t="Include">
+            <e p="MetalImpactScript.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Camera" t="Include">
+            <e p="CameraFollow.cs" t="Include" />
+          </e>
+          <e p="Enemy" t="Include">
+            <e p="EnemyAttack.cs" t="Include" />
+            <e p="EnemyHealth.cs" t="Include" />
+            <e p="EnemyMovement.cs" t="Include" />
+            <e p="Lego" t="Include">
+              <e p="EnemyAttackDamagingLego.cs" t="Include" />
+              <e p="EnemyHelathButtonsRewarding.cs" t="Include" />
+              <e p="PausableEnemyMovement.cs" t="Include" />
+            </e>
+            <e p="MNonstersDefense" t="Include">
+              <e p="EnemyAAttackDefense.cs" t="Include" />
+              <e p="EnemyHealthClone.cs" t="Include" />
+              <e p="EnemyHealthExplode.cs" t="Include" />
+              <e p="EnemyMovementDefense.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Lego" t="Include">
+            <e p="Cube1x1.cs" t="Include" />
+            <e p="Cube2x2.cs" t="Include" />
+            <e p="Cube2x4.cs" t="Include" />
+            <e p="Gun1x1.cs" t="Include" />
+            <e p="GunShooting.cs" t="Include" />
+            <e p="Lego.cs" t="Include" />
+            <e p="Light1x1.cs" t="Include" />
+            <e p="RandomMapGenerator.cs" t="Include" />
+            <e p="Rotable.cs" t="Include" />
+            <e p="Rotator2x2.cs" t="Include" />
+            <e p="Trigger2x2.cs" t="Include" />
+            <e p="Tube1x1.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="SelectToolButton.cs" t="Include" />
+              <e p="UIFocus.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Managers" t="Include">
+            <e p="EnemyManager.cs" t="Include" />
+            <e p="GameOverManager.cs" t="Include" />
+            <e p="Lego" t="Include">
+              <e p="ButtonsManager.cs" t="Include" />
+              <e p="GameOverAddButtons.cs" t="Include" />
+              <e p="PausableEnemyManager.cs" t="Include" />
+            </e>
+            <e p="ScoreManager.cs" t="Include" />
+          </e>
+          <e p="MonstersDefense" t="Include">
+            <e p="AnimationDestroy.cs" t="Include" />
+            <e p="BaseHealth.cs" t="Include" />
+            <e p="GameOverDefense.cs" t="Include" />
+          </e>
+          <e p="Pause.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="Lego" t="Include">
+              <e p="PausablePlayerMovement.cs" t="Include" />
+              <e p="PausablePlayerShooting.cs" t="Include" />
+              <e p="PlayerPlacingLego.cs" t="Include" />
+            </e>
+            <e p="PlayerHealth.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+            <e p="PlayerShooting.cs" t="Include" />
+          </e>
+          <e p="StandardShaderUtils.cs" t="Include" />
+        </e>
+        <e p="SurvivalShooter_Third-PartyNotice.txt" t="Include" />
+        <e p="TutorialInfo" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Editor" t="Include">
+              <e p="ReadmeEditor.cs" t="Include" />
+            </e>
+            <e p="Readme.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Skola.sln" t="IncludeFlat" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+    <e p="C:\Users\Uzivatel\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Uzivatel\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Skola.1855480499.00" t="ExcludeRecursive" />
+  </component>
+</project>

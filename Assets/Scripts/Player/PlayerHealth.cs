@@ -27,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
     PlayerShooting playerShooting;
     bool isDead;
     bool damaged;
+    
 
 
     void Awake ()
@@ -75,7 +76,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-    void Death ()
+    public void Death ()
     {
         isDead = true;
 
@@ -94,6 +95,9 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
+
+    
+    
     public void RestartLevel ()
     {
         SceneManager.LoadScene (0);

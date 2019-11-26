@@ -6,9 +6,9 @@ public class GameOverManager : MonoBehaviour
     [SerializeField]
     protected PlayerHealth playerHealth;
     [SerializeField]
-    private float restartDelay = 7f;
+    protected float restartDelay = 7f;
 
-    Animator anim;
+    protected Animator anim;
     protected float restartTimer;
 
     void Awake()

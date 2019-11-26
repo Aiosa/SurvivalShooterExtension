@@ -30,17 +30,13 @@ public class GunShooting : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (!Pause.gamePaused())
-        {
-            gunLine.enabled = false;
-            if (!origin.isActive() || Pause.gamePaused()) return;
+        gunLine.enabled = false;
+        if (!origin.isActive() || Pause.gamePaused()) return;
 
-            timer += Time.deltaTime;
+        timer += Time.deltaTime;
 
-            if (timer >= timeBetweenBullets && Time.timeScale != 0)
-            {
-                Shoot();
-            }
+        if (timer >= timeBetweenBullets && Time.timeScale != 0) {
+            Shoot();
         }
     }
 
@@ -57,6 +53,8 @@ public class GunShooting : MonoBehaviour
         gunLine.useWorldSpace = true;
         gunLine.SetPosition(0, shoot.origin);
 
+        Debug.DrawRay(shoot.origin, shoot.direction, Color.cyan);
+        Debug.DrawRay(shoot.origin, Vector3.up, Color.red, 1f);
 
         if (Physics.Raycast(shoot, out shootHit, origin.getRange(), shootableMask))
         {
@@ -73,10 +71,15 @@ public class GunShooting : MonoBehaviour
                 Instantiate(shootMetalAnimation, shootHit.point, Quaternion.identity);
             }
             gunLine.SetPosition(1, shootHit.point);
+            Debug.DrawRay(shootHit.point, Vector3.up, Color.red, 1f);
+
+
         }
         else
         {
             gunLine.SetPosition(1, shoot.origin + shoot.direction * origin.getRange());
+            Debug.DrawRay(shootHit.point, Vector3.up, Color.red, 1f);
+
         }
     }
 }

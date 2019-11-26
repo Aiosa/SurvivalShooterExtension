@@ -82,14 +82,11 @@ public class PlayerShooting : MonoBehaviour
                     enemyHealth.TakeDamage(damagePerShot, shootHit.point);
                 }
                 
-                if (enemyHealth.getHealth() > 0f)
-                {
-                    NavMeshAgent agent = shootHit.collider.GetComponent<NavMeshAgent>();
-                    Rigidbody body = shootHit.collider.GetComponent<Rigidbody>();
-                    agent.enabled = false;
-                    body.isKinematic = true;
-                    body.AddForce(-shootRay.direction.normalized * 10, ForceMode.Impulse);
-                }
+                NavMeshAgent agent = shootHit.collider.GetComponent<NavMeshAgent>();
+                Rigidbody body = shootHit.collider.GetComponent<Rigidbody>();
+                agent.enabled = false;
+                body.isKinematic = true;
+                body.AddForce(-shootRay.direction.normalized * 10, ForceMode.Impulse);
             } else
             {
                 Instantiate(shootMetalAnimation, shootHit.point, Quaternion.identity);

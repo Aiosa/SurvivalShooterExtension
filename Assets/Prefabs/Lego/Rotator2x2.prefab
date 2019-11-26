@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 4791897989126006711}
-  value: 8
+  value: 5
   maxHealth: 200
   discColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
   discRenderer: {fileID: 4077796394503756545}
