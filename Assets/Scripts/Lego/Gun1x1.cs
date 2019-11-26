@@ -22,7 +22,8 @@ public class Gun1x1 : Cube1x1
 
     public Ray getRay()
     {
-        //Debug.Log("POINT " + sidePoint);
+        Debug.Log("POINT " + sidePoint);
+      
         return new Ray(transfromWithoutCounterDetection(shootPosition), toV3(Matrix4x4.Rotate(transform.rotation) * new Vector3(-1f, 0f, 1f)).normalized);
     }
 
@@ -105,10 +106,10 @@ public class Gun1x1 : Cube1x1
     protected override void onPlacement()
     {
         //Debug.Log("parrent " + getParent().name);
-        if (getParent() != null && getParent().GetComponentInParent<Lego>().GetType() == typeof(Trigger2x2))
+        if (getParent() != null && getParent().GetComponentInParent<Trigger2x2>().GetType() == typeof(Trigger2x2))
         {
             setOnTrigger();
         }
-        base.onPlacement();
+
     }
 }

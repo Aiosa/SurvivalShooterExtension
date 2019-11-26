@@ -10,7 +10,7 @@ public class GameOverAddButtons : GameOverManager
     [SerializeField]
     private Text addValue;
 
-    private float sumDelay = 2.0f;
+    private float sumDelay = 2.5f;
     private bool added = false;
 
     private void addScore()
@@ -27,17 +27,13 @@ public class GameOverAddButtons : GameOverManager
         added = true;
     }
 
-    public bool isGameOver()
-    {
-        return playerHealth.getHealth() <= 0;
-    }
-
     protected override void Update()
     {
-        if (isGameOver())
+        if (playerHealth.getHealth() <= 0)
         {
             if (restartTimer >= sumDelay)
             {
+                Debug.Log("ADDED");
                 addScore();
             }
             base.Update();

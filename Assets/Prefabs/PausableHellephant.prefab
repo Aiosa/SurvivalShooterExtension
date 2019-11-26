@@ -377,7 +377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 1
   attackDamage: 30
-  delay: 4
+  delay: 10
 --- !u!1001 &7100457111143925763
 PrefabInstance:
   m_ObjectHideFlags: 0

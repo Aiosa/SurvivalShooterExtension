@@ -3,11 +3,11 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
-    Transform player;
-    PlayerHealth playerHealth;
-    EnemyHealth enemyHealth;
+    protected Transform player;
+    protected PlayerHealth playerHealth;
+    protected EnemyHealth enemyHealth;
     protected NavMeshAgent nav;
-    Rigidbody body;
+    protected Rigidbody body;
 
     void Awake ()
     {
