@@ -1638,13 +1638,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111346668}
-  m_LocalRotation: {x: 0.89406, y: 0.000000079651045, z: 0.44794723, w: -0.0000001421227}
-  m_LocalPosition: {x: -19.27, y: 1.861, z: -9.73}
+  m_LocalRotation: {x: 0.9881073, y: 0.00000011922012, z: 0.1537658, w: -0.000000111039256}
+  m_LocalPosition: {x: -28.61, y: 1.86, z: -2.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 111562960}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -180, y: -17.690002, z: 0}
 --- !u!4 &111625484
 Transform:
   m_ObjectHideFlags: 0
@@ -1751,7 +1751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111396818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.71, y: 0.03, z: -25.5}
+  m_LocalPosition: {x: -1.13, y: 0.03, z: -31.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 111672756}
@@ -2460,7 +2460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &170476412
 Light:
   m_ObjectHideFlags: 0
@@ -3861,7 +3861,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328444525}
   m_LocalRotation: {x: 0, y: 0.9063079, z: 0, w: 0.42261827}
-  m_LocalPosition: {x: -26.5, y: 0.8, z: 7.91}
+  m_LocalPosition: {x: -25.872, y: 0.8, z: 7.712}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3885,8 +3885,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 729423aa6272f7443994fc7b99cbb735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerShot: 20
-  timeBetweenBullets: 0.2
+  damagePerShot: 60
+  timeBetweenBullets: 0.5
   range: 100
   shootMetalAnimation: {fileID: 6711809411163321829, guid: 4532048856cd129439d87aedf0c9e03c,
     type: 3}
@@ -4594,7 +4594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2091228561}
-  restartDelay: 7
+  restartDelay: 30
   multiplyButtons: 2
   addValue: {fileID: 877833260}
 --- !u!114 &1763521105
@@ -4806,7 +4806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbb0693fe774e64e9bee6824648ad2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingAmount: 5005
+  startingAmount: 8
 --- !u!114 &1853565867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5440,6 +5440,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.99999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262775230139705455, guid: 9c497398b3d21a446982e2e647aa2498,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8262775230139705459, guid: 9c497398b3d21a446982e2e647aa2498, type: 3}

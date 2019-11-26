@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 8626162187633612925}
-  value: 2
+  value: 7
   maxHealth: 200
   rend: {fileID: 6297766992803555085}
   color: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}

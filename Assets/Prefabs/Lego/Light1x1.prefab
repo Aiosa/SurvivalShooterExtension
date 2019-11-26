@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 4494033178321075386}
-  value: 12
+  value: 30
   maxHealth: 200
   rend: {fileID: 304156269964055237}
   color: {r: 1, g: 0.8798679, b: 0, a: 1}

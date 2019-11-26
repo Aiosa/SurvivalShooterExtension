@@ -92,7 +92,7 @@ public abstract class Lego : MonoBehaviour
     {
         health -= amount;
         reddenColor(((float)(maxHealth - health)) / maxHealth);
-        Debug.Log("DAMAGED " + amount);
+        //Debug.Log("DAMAGED " + amount);
         if (health < 0)
         {
             Destroy(gameObject);
@@ -122,7 +122,7 @@ public abstract class Lego : MonoBehaviour
 
     protected bool canBePlaced()
     {
-        Debug.Log("Collides " + (collides > 0) + ", outside " + outsideBounds + ", invalid Loc " + invalidLocation + ", with location of " + transform.position);
+        //Debug.Log("Collides " + (collides > 0) + ", outside " + outsideBounds + ", invalid Loc " + invalidLocation + ", with location of " + transform.position);
         return collides < 1 && !outsideBounds && !invalidLocation;
     }
 
@@ -256,8 +256,6 @@ public abstract class Lego : MonoBehaviour
     {
  
         enableEmitting(Pause.gamePaused());
-    
-
         if (!isPreview) return;
         //Debug.Log("collides :" + collides + " outsideBounds " + outsideBounds + " invalidLocation " + invalidLocation);           
         setPreviewColor(true); //todo setting color can create the material again and again?  
@@ -293,7 +291,7 @@ public abstract class Lego : MonoBehaviour
     {
         if (canBePlaced())
         {
-            Debug.Log("SOLID");
+            //Debug.Log("SOLID");
             GameObject created = Instantiate(gameObject, gameObject.transform.position, Quaternion.identity);
             created.gameObject.tag = "LegoAttachable";
             Destroy(created.gameObject.GetComponent<Rigidbody>());
@@ -320,13 +318,12 @@ public abstract class Lego : MonoBehaviour
 
             return true;
         }
-        Debug.Log("Cannot place");
+        //Debug.Log("Cannot place");
         return false;      
     }
 
     protected void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger entered");
         if (!isPreview) return; //todo if ! ispreview can be damaged by enemies
 
         if (other.gameObject.layer == LayerMask.NameToLayer("Shootable") || other.gameObject.layer == LayerMask.NameToLayer("Player"))

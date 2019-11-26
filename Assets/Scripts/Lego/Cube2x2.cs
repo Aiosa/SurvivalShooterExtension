@@ -27,28 +27,6 @@ public class Cube2x2 : Lego
         toNormal = new Vector3(validateAxis(toNormal.x), 0f, validateAxis(toNormal.z));
 
         return rotate45 * toNormal;
-
-        int length = 25;
-
-        float legoSize = getCubeGridCellWith();
-
-        float d = 100f;
-        Vector3 closest = new Vector3(0f, 0f, 0f);
-        for (int i = -length; i < length; i++)
-        {
-            for (int j = -length; j < length; j++)
-            {
-                Vector3 gridPt = rotate45 * new Vector3(legoSize * i, 0f, legoSize * j);
-                float dd = Vector3.Distance(gridPt, point);
-                if (dd < d)
-                {
-                    if (dd < 0.3f) return gridPt;
-                    d = dd;
-                    closest = gridPt;
-                }
-            }
-        }
-        return closest;
     }
 
     public override Vector3[] getDefinedRaysOrigins()

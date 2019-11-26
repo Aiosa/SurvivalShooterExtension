@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyAttackDamagingLego : EnemyAttack
 {
@@ -17,7 +15,7 @@ public class EnemyAttackDamagingLego : EnemyAttack
     void OnTriggerStay(Collider other)
     {
         //Debug.Log("stay");
-        if (other.gameObject.tag.Equals("Lego"))
+        if (!Pause.gamePaused() && other.gameObject.tag.Equals("Lego"))
         {
             if (damageDelay <= 0f)
             {
@@ -29,6 +27,4 @@ public class EnemyAttackDamagingLego : EnemyAttack
         
         base.OnTriggerEnter(other);
     }
-
-
 }
