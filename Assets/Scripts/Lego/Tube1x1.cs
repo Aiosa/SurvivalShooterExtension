@@ -23,7 +23,7 @@ public class Tube1x1 : Lego
     public override Vector3 getClosest(Vector3 point)
     {
         Vector3 rotated = rotateMinus45 * point;
-        Vector3 normalGrid  = new Vector3(validateAxis(rotated.x), 0f, validateAxis(rotated.z));
+        Vector3 normalGrid = new Vector3(validateAxis(rotated.x), 0f, validateAxis(rotated.z));
         Vector3 shiftedGrid = new Vector3(validateAxis(rotated.x, 0.315f), 0f, validateAxis(rotated.z, 0.315f));
 
         if (Vector3.Distance(rotated, normalGrid) < Vector3.Distance(shiftedGrid, normalGrid))
@@ -73,7 +73,7 @@ public class Tube1x1 : Lego
                     result = -hit.point.y;
                     lastHit = hit.collider.gameObject;
                     return false;
-                } 
+                }
             }
 
 
@@ -101,7 +101,7 @@ public class Tube1x1 : Lego
             if (lastHit != null)
             {
                 lastRotationAmount = -90f + lastHit.transform.eulerAngles.y;
-                flipXaddY(transform, 90f, lastRotationAmount); 
+                flipXaddY(transform, 90f, lastRotationAmount);
             }
             else
             {

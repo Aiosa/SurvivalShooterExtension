@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,11 +33,12 @@ public class UIFocus : MonoBehaviour
     EventSystem m_EventSystem;
     void Start()
     {
-       // center = GetComponent<Image>();
+        // center = GetComponent<Image>();
         //Fetch the Raycaster from the GameObject (the Canvas)
         m_Raycaster = GetComponent<GraphicRaycaster>();
         //Fetch the Event System from the Scene
         m_EventSystem = GetComponent<EventSystem>();
+        selectedCube = 0;
     }
 
     private void setEnabledButtons(bool enabled)
@@ -84,7 +84,9 @@ public class UIFocus : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             if (!dragging)
+            {
                 return;
+            }
 
             m_PointerEventData = new PointerEventData(m_EventSystem);
             m_PointerEventData.position = Input.mousePosition;
@@ -101,18 +103,28 @@ public class UIFocus : MonoBehaviour
                     {
                         SelectToolButton selection = result.gameObject.GetComponent<SelectToolButton>();
                         selectedCube = selection.get();
-                        placer.setActive(true, selectedCube);
-                        MainButton.GetComponent<Image>().sprite = sprites[selectedCube % sprites.Length];
-
-                        dragging = false;
-                        setEnabledAll(false);
-                        Pause.setPaused(true);
+                        switchToPlacingMode();
                     }
                 }
             }
             dragging = false;
             setEnabledAll(false);
         }
+
+        if (!Pause.gamePaused() && Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            switchToPlacingMode();
+        }
+    }
+
+    private void switchToPlacingMode()
+    {
+        placer.setActive(true, selectedCube);
+        MainButton.GetComponent<Image>().sprite = sprites[selectedCube % sprites.Length];
+
+        dragging = false;
+        setEnabledAll(false);
+        Pause.setPaused(true);
     }
 
     private void setEnabledAll(bool enabled)
@@ -123,4 +135,3 @@ public class UIFocus : MonoBehaviour
         }
     }
 }
-

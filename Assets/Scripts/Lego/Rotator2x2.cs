@@ -160,8 +160,8 @@ public class Rotator2x2 : Lego
             discRenderer.material.EnableKeyword("_EMISSION");
         }
         else
-        { 
-            
+        {
+
             cubeRenderer.material.DisableKeyword("_EMISSION");
             discRenderer.material.DisableKeyword("_EMISSION");
         }

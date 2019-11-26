@@ -40,7 +40,7 @@ public class Cube2x4 : Lego
         return new Vector3(rotated.x, rotated.y, rotated.z) + calculatedPosition;
     }
     public override Vector3[] getDefinedRaysOrigins()
-    { 
+    {
         return new Vector3[] {
             localizePoint(p1), localizePoint(p2), localizePoint(p3), localizePoint(p4), localizePoint(p5),
             localizePoint(p6), localizePoint(p7), localizePoint(p8), localizePoint(p9), localizePoint(p10)
@@ -110,7 +110,7 @@ public class Cube2x4 : Lego
                 result = hit.point.y;
                 lastHit = hit.collider.gameObject;
             }
-        
+
             return true;
         });
         if (!wasHit) lastHit = null;

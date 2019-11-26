@@ -23,7 +23,7 @@ public class Cube1x1 : Lego
     public override Vector3 getClosest(Vector3 point)
     {
         Vector3 toNormal = rotateMinus45 * point;
-        toNormal = new Vector3(validateAxis(toNormal.x), 0f, validateAxis(toNormal.z));
+        toNormal = new Vector3(validateAxis(toNormal.x, 0.315f), 0f, validateAxis(toNormal.z, 0.315f));
         return rotate45 * toNormal;
     }
 
@@ -40,7 +40,8 @@ public class Cube1x1 : Lego
             {
                 //cube1x1 can be on trigger only in middle, outside of its defined grid
                 RaycastHit triggerHit;
-                if (Physics.Raycast(new Ray(hit.collider.transform.position + Vector3.up * (MAX_HEIGHT + OFFSET), Vector3.down), out triggerHit)) {
+                if (Physics.Raycast(new Ray(hit.collider.transform.position + Vector3.up * (MAX_HEIGHT + OFFSET), Vector3.down), out triggerHit))
+                {
                     result = triggerHit.point.y;
                     lastHit = hit.collider.gameObject;
                 }
@@ -108,8 +109,8 @@ public class Cube1x1 : Lego
 
     protected override void onPlacement()
     {
-        setOpaque(true);
         rend.material.SetColor("_EmissionColor", color * 0.2f);
+        setOpaque(true);
     }
 
     protected override void reddenColor(float ratio)
@@ -124,8 +125,13 @@ public class Cube1x1 : Lego
 
     public override void enableEmitting(bool enable)
     {
-        if (enable) rend.material.EnableKeyword("_EMISSION");
-        else rend.material.DisableKeyword("_EMISSION");
+        if (enable)
+        {
+            rend.material.EnableKeyword("_EMISSION");
+        }
+        else
+        {
+            rend.material.DisableKeyword("_EMISSION");
+        }
     }
 }
-

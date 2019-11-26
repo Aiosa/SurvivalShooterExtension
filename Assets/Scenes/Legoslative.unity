@@ -3885,7 +3885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 729423aa6272f7443994fc7b99cbb735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerShot: 60
+  damagePerShot: 45
   timeBetweenBullets: 0.5
   range: 100
   shootMetalAnimation: {fileID: 6711809411163321829, guid: 4532048856cd129439d87aedf0c9e03c,

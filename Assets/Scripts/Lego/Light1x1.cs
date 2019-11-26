@@ -62,7 +62,8 @@ public class Light1x1 : Lego
             if (hit.collider.name.Equals("TriggerBody"))
             {
                 result = (hit.collider.transform.position.x == hit.point.x && hit.collider.transform.position.z == hit.point.z) ? hit.point.y : -hit.point.y;
-            } else
+            }
+            else
             {
                 result = hit.point.y;
             }
@@ -101,7 +102,7 @@ public class Light1x1 : Lego
         }
     }
 
-  
+
 
     public override float getHeight()
     {

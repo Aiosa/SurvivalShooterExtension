@@ -65,14 +65,14 @@ public abstract class Lego : MonoBehaviour
     {
         foreach (GameObject child in dependent)
         {
-           if (child != null) Destroy(child);
+            if (child != null) Destroy(child);
         }
     }
 
     //util
     protected float roundByCellWidth(float axisVal, float add)
     {
-        return ((int)(axisVal / getCubeGridCellWith())) * getCubeGridCellWith() + add; 
+        return ((int)(axisVal / getCubeGridCellWith())) * getCubeGridCellWith() + add;
     }
     //util
     protected static float clipToMap(float axisVal)
@@ -92,7 +92,7 @@ public abstract class Lego : MonoBehaviour
     {
         health -= amount;
         reddenColor(((float)(maxHealth - health)) / maxHealth);
-        Debug.Log("DAMAGED " + amount);
+        //Debug.Log("DAMAGED " + amount);
         if (health < 0)
         {
             Destroy(gameObject);
@@ -122,7 +122,7 @@ public abstract class Lego : MonoBehaviour
 
     protected bool canBePlaced()
     {
-        Debug.Log("Collides " + (collides > 0) + ", outside " + outsideBounds + ", invalid Loc " + invalidLocation + ", with location of " + transform.position);
+        //Debug.Log("Collides " + (collides > 0) + ", outside " + outsideBounds + ", invalid Loc " + invalidLocation + ", with location of " + transform.position);
         return collides < 1 && !outsideBounds && !invalidLocation;
     }
 
@@ -156,7 +156,7 @@ public abstract class Lego : MonoBehaviour
             //Debug.Log("valid");
             invalidLocation = false;
         }
-       
+
         transform.position = new Vector3(calculatedPosition.x, y, calculatedPosition.z);
         outsideBounds = transform.position.y > MAX_HEIGHT;
     }
@@ -207,7 +207,7 @@ public abstract class Lego : MonoBehaviour
         for (int i = 0; i < parent.transform.childCount; i++)
         {
             changeChildrenLayers(parent.transform.GetChild(i).gameObject, mask);
-        }  
+        }
     }
 
     public abstract int getLengthCount();
@@ -254,10 +254,8 @@ public abstract class Lego : MonoBehaviour
 
     void LateUpdate()
     {
- 
-        enableEmitting(Pause.gamePaused());
-    
 
+        enableEmitting(Pause.gamePaused());
         if (!isPreview) return;
         //Debug.Log("collides :" + collides + " outsideBounds " + outsideBounds + " invalidLocation " + invalidLocation);           
         setPreviewColor(true); //todo setting color can create the material again and again?  
@@ -293,7 +291,7 @@ public abstract class Lego : MonoBehaviour
     {
         if (canBePlaced())
         {
-            Debug.Log("SOLID");
+            //Debug.Log("SOLID");
             GameObject created = Instantiate(gameObject, gameObject.transform.position, Quaternion.identity);
             created.gameObject.tag = "LegoAttachable";
             Destroy(created.gameObject.GetComponent<Rigidbody>());
@@ -316,17 +314,16 @@ public abstract class Lego : MonoBehaviour
                 script.lastHit = lastHit;
             }
             script.onPlacement();
-          
+
 
             return true;
         }
-        Debug.Log("Cannot place");
-        return false;      
+        //Debug.Log("Cannot place");
+        return false;
     }
 
     protected void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger entered");
         if (!isPreview) return; //todo if ! ispreview can be damaged by enemies
 
         if (other.gameObject.layer == LayerMask.NameToLayer("Shootable") || other.gameObject.layer == LayerMask.NameToLayer("Player"))
