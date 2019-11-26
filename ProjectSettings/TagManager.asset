@@ -9,6 +9,7 @@ TagManager:
   - Lego
   - Tool
   - ToolMiddle
+  - Launcher
   layers:
   - Default
   - TransparentFX
