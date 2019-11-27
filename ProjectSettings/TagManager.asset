@@ -10,6 +10,8 @@ TagManager:
   - Tool
   - ToolMiddle
   - Launcher
+  - Base
+  - Music
   layers:
   - Default
   - TransparentFX

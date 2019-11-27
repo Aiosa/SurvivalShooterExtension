@@ -64,3 +64,6 @@ the game is over.
 **Special enemies**
 Mushroom - if you kill mushroom, two little shrooms spawn.
 Fire Monster - if you kill it, the head explodes. It will hurt you if you stand too close.
+
+
+Music by Jiří Horák
