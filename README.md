@@ -58,7 +58,7 @@ Author: Lukáš Sučák
 
 Defend your base against enemies. The enemies target either you, the player
 or your base (the broken robot behind you) depending on who is closer.
-The base has more HP, but if either of you or the base runs out of HP,
+The base has more HP, but if either you or the base runs out of HP,
 the game is over.
 
 **Special enemies**
