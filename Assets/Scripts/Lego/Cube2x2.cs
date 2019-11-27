@@ -10,7 +10,7 @@ public class Cube2x2 : Lego
     private Vector3 p5 = new Vector3(0f, MAX_HEIGHT + 5f, -0.4454f);
 
     [SerializeField]
-    SkinnedMeshRenderer rend;
+    MeshRenderer rend;
 
     [SerializeField]
     Color color;

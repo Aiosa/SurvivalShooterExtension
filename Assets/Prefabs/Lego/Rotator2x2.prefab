@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4986230516685914755}
-  - component: {fileID: 4077796394503756545}
+  - component: {fileID: 4204654428769265901}
+  - component: {fileID: 3129319429940491553}
   m_Layer: 0
   m_Name: RotatorDisc
   m_TagString: Lego
@@ -31,8 +32,8 @@ Transform:
   m_Father: {fileID: 321912857723687052}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
---- !u!137 &4077796394503756545
-SkinnedMeshRenderer:
+--- !u!23 &4204654428769265901
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -69,18 +70,14 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
+--- !u!33 &3129319429940491553
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767412009929134855}
   m_Mesh: {fileID: -7628182941106214636, guid: e08a79d223c105b488c7837efed71bae, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 34.27013, z: 0}
-    m_Extent: {x: 66.435684, y: 2.626956, z: 66.249916}
-  m_DirtyAABB: 0
 --- !u!1 &3615532680698307231
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,9 +128,9 @@ MonoBehaviour:
   value: 5
   maxHealth: 200
   discColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
-  discRenderer: {fileID: 4077796394503756545}
+  discRenderer: {fileID: 4204654428769265901}
   cubeColor: {r: 0.11433723, g: 0.7264151, b: 0, a: 1}
-  cubeRenderer: {fileID: 5281052104371484162}
+  cubeRenderer: {fileID: 4342562933605504282}
 --- !u!114 &-2327818636401650027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,9 +154,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2918587780693174498}
-  - component: {fileID: 5281052104371484162}
   - component: {fileID: 4791897989126006711}
   - component: {fileID: 703488795377950947}
+  - component: {fileID: 8267505608565907857}
+  - component: {fileID: 4342562933605504282}
   m_Layer: 0
   m_Name: RotatorBody
   m_TagString: Lego
@@ -181,8 +179,45 @@ Transform:
   m_Father: {fileID: 321912857723687052}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
---- !u!137 &5281052104371484162
-SkinnedMeshRenderer:
+--- !u!65 &4791897989126006711
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7184511913306302895}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 157, y: 29.764856, z: 157}
+  m_Center: {x: -0.34388012, y: 15.782428, z: -1.2507299}
+--- !u!208 &703488795377950947
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7184511913306302895}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 79, y: 25.116001, z: 79}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.344, y: 25.771002, z: -1.251}
+  m_TimeToStationary: 0.5
+--- !u!33 &8267505608565907857
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7184511913306302895}
+  m_Mesh: {fileID: -5495902117074765545, guid: e08a79d223c105b488c7837efed71bae, type: 3}
+--- !u!23 &4342562933605504282
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -219,44 +254,3 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -5495902117074765545, guid: e08a79d223c105b488c7837efed71bae, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: -0.3438835, y: 25.771175, z: -1.2507286}
-    m_Extent: {x: 79, y: 25.116337, z: 79}
-  m_DirtyAABB: 0
---- !u!65 &4791897989126006711
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7184511913306302895}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 157, y: 29.764856, z: 157}
-  m_Center: {x: -0.34388012, y: 15.782428, z: -1.2507299}
---- !u!208 &703488795377950947
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7184511913306302895}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 79, y: 25.116001, z: 79}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.344, y: 25.771002, z: -1.251}
-  m_TimeToStationary: 0.5

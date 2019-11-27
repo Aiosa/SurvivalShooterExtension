@@ -47,7 +47,7 @@ MonoBehaviour:
   trigger: {fileID: 2545306877159175538}
   value: 2
   maxHealth: 200
-  rend: {fileID: 103752973047642027}
+  rend: {fileID: 7915760543199933124}
   color: {r: 0.13862053, g: 0.11681201, b: 0.990566, a: 1}
 --- !u!1 &3534694636015499335
 GameObject:
@@ -59,8 +59,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3757888465476365623}
   - component: {fileID: 2545306877159175538}
-  - component: {fileID: 103752973047642027}
   - component: {fileID: 5220331709621082757}
+  - component: {fileID: 637197256664368753}
+  - component: {fileID: 7915760543199933124}
   m_Layer: 0
   m_Name: LongCubeBody
   m_TagString: Lego
@@ -95,8 +96,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 156, y: 94.6, z: 311.8613}
   m_Center: {x: -2.1112595, y: 48.1, z: 78.52026}
---- !u!137 &103752973047642027
-SkinnedMeshRenderer:
+--- !u!208 &5220331709621082757
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3534694636015499335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 78, y: 56.618004, z: 155.93102}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.111, y: 57.520004, z: 78.520004}
+  m_TimeToStationary: 0.5
+--- !u!33 &637197256664368753
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3534694636015499335}
+  m_Mesh: {fileID: -1543863673773195574, guid: 20b20e80fa8b14043a9d47febd39da26, type: 3}
+--- !u!23 &7915760543199933124
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -133,31 +158,3 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -1543863673773195574, guid: 20b20e80fa8b14043a9d47febd39da26, type: 3}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: -2.1112595, y: 57.52008, z: 78.52026}
-    m_Extent: {x: 78, y: 56.61782, z: 155.93065}
-  m_DirtyAABB: 0
---- !u!208 &5220331709621082757
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3534694636015499335}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 78, y: 56.618004, z: 155.93102}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -2.111, y: 57.520004, z: 78.520004}
-  m_TimeToStationary: 0.5

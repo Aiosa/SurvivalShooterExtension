@@ -15,6 +15,8 @@ public class MainLauncher : MonoBehaviour
     private Button monster;
     [SerializeField]
     private Button lego;
+    [SerializeField]
+    private Button exit;
 
     void Start()
     {
@@ -22,6 +24,7 @@ public class MainLauncher : MonoBehaviour
         health.onClick.AddListener(() => { load("LevelHU"); });
         monster.onClick.AddListener(() => { load("Level02"); });
         lego.onClick.AddListener(() => { load("Legoslative"); });
+        exit.onClick.AddListener(() => { Application.Quit(); });
     }
 
     void load(string level)

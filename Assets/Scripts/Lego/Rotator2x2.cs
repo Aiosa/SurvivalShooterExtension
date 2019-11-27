@@ -11,12 +11,12 @@ public class Rotator2x2 : Lego
     [SerializeField]
     private Color discColor;
     [SerializeField]
-    private SkinnedMeshRenderer discRenderer;
+    private MeshRenderer discRenderer;
 
     [SerializeField]
     private Color cubeColor;
     [SerializeField]
-    private SkinnedMeshRenderer cubeRenderer;
+    private MeshRenderer cubeRenderer;
 
     protected override void Start()
     {

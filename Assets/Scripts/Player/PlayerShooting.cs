@@ -20,7 +20,7 @@ public class PlayerShooting : MonoBehaviour
     private LineRenderer gunLine;
     private AudioSource gunAudio;
     private Light gunLight;
-    private float effectsDisplayTime = 0.2f;
+    private float effectsDisplayTime = 0.15f;
 
     void Awake ()
     {
