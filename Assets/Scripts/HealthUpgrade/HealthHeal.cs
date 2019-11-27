@@ -14,7 +14,7 @@ public class HealthHeal : MonoBehaviour
         {
             PlayerHealthHU playerHealthHU = other.gameObject.GetComponent<PlayerHealthHU>();
             playerHealthHU.heal(amount);
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }

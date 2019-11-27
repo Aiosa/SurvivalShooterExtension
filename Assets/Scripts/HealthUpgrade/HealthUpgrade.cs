@@ -13,7 +13,7 @@ public class HealthUpgrade : MonoBehaviour
         {
             PlayerHealthHU playerHealthHU = other.gameObject.GetComponent<PlayerHealthHU>();
             playerHealthHU.upgradeHealth(amount);
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }

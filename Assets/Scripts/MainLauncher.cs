@@ -19,10 +19,9 @@ public class MainLauncher : MonoBehaviour
     void Start()
     {
         original.onClick.AddListener(() => { load("Level 01"); });
-        health.onClick.AddListener(() => { Debug.Log("You have clicked the button!"); });
+        health.onClick.AddListener(() => { load("LevelHU"); });
         monster.onClick.AddListener(() => { load("Level02"); });
         lego.onClick.AddListener(() => { load("Legoslative"); });
-
     }
 
     void load(string level)
