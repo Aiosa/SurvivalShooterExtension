@@ -5,6 +5,7 @@ Play the "original" game or its modifications. All in one. Choose one one mode a
 press an Escape key. You are returned to the main screen also when you die.
 
 ## Legoslative ##
+Author: Jiří Horák 469130
 
 A gamemode that allows you to place lego bricks in order to survive.
 
@@ -51,3 +52,15 @@ Two different health kits:
 * Green will increase player maximum health without healing (visually player will lost some health)
 
 There is chance that enemy will drop one of the kit upon death.
+
+## Monster defence ##
+Author: Lukáš Sučák
+
+Defend your base against enemies. The enemies target either you, the player
+or your base (the broken robot behind you) depending on who is closer.
+The base has more HP, but if either of you or the base runs out of HP,
+the game is over.
+
+**Special enemies**
+Mushroom - if you kill mushroom, two little shrooms spawn.
+Fire Monster - if you kill it, the head explodes. It will hurt you if you stand too close.

@@ -320,10 +320,10 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 6
   deathClip: {fileID: 8300000, guid: 1d3bfb9269f136947bf8ac164cace1ff, type: 3}
-  healthHealChance: 5000
+  healthHealChance: 1000
   healthHeal: {fileID: 6620437035860258273, guid: bd5a2743944c213459e91f78d46d0678,
     type: 3}
-  healthUpgradeChance: 1000
+  healthUpgradeChance: 250
   healthUpgrade: {fileID: 7874767123107231704, guid: b5f316be5481dd54db45d237e550e0a3,
     type: 3}
 --- !u!114 &3358904603238174722
