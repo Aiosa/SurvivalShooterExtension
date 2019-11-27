@@ -29,8 +29,8 @@ In this mode, enemies are stuck and can't move, but so can't you.
 However, your enemies can still damage either lego bricks or you if they are close enough!
 The bricks are highlighted in this mode so you can easily see where you are placing lego (tip: use this feature in early
 game for orientation in the dark). To select a brick to place, left mouse button drag and drop from the mode icon to the icon you
-want to select (on right click a selection is shown). When you fire (e.g. left mouse button click anywhere else than the mode icon),
-you return to the combat mode.
+want to select (on left click a selection is shown). When you fire (e.g. left mouse button click anywhere else than the mode icon),
+you return to the combat mode. To place a brick, click right-mouse button on the desired place - the brick will be placed if you have enough money and the shown selection is not red (e.g. invalid position). Use mouse scroll to rotate bricks.
 
 The enemies spawn more and more quickly over time, build yourself a system in that time so you are prepared!
 
